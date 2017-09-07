@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+	<! page header >
+	<head>
+		<title>Aadithya</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>	
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script>
+			$(function() {
+			  $('a[href*="#"]:not([href="#"])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html, body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000);
+			        return false;
+			      }
+			    }
+			  });
+			});
+		</script>
+		<style>
+			.affix {
+				top: 0;
+				width: 100%;
+			}
+			.affix + .container-fluid {
+				padding-top: 70px;
+			}
+			
+			#aboutMe { 
+      			background-color: #ff3b3f; /* Green */
+      			color: #000000;
+  			}
+  			
+  			#experience, #projects , #technicalskills, #education , #publications, #adventures{
+  				background-color: #efefef;
+  			}
+  			
+  			.margin {
+  				margin-bottom: 10px;
+  			}
+  			.container-fluid {
+			    padding-top: 70px;
+			    padding-bottom: 70px;
+			}
+			.card {				
+				padding-bottom: 5px;
+				margin-bottom: 25px;
+				margin-top: 25px;
+				margin-left: auto;
+				margin-right: auto;
+
+				max-height: 400px; 
+				max-width: 450px;
+
+				background-color: #ffffff;
+
+				border-radius: 5px;
+			    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			    border-radius: 5px;
+			    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+			    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+			}
+
+			.img-card {
+				object-fit: cover;
+				min-height: 200px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.img-card-bg {
+				/*max-height: 300px;*/
+				object-fit: cover;
+			}
+
+			.card::after {
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+			    opacity: 0;
+			    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+			    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+			}
+
+			.card:hover {
+				-webkit-transform: scale(1.1, 1.1);
+  				transform: scale(1.1, 1.1);
+			}
+
+			.card:hover::after {
+				opacity: 1;
+			}
+
+		</style>
+	</head>
+
+	<! page body >
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+		<! navigation bar >
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container" style="margin:0px;">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					</button>
+					<a class="navbar-brand" href="#aboutMe">Aadithya</a>
+				</div>
+				<div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav">
+							<li><a href="#experience">Experience</a></li>
+							<li><a href="#education">Education</a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#publications">Publications</a></li>
+							<li><a href="#technicalskills">Technical Skills</a></li>
+							<li><a href="#adventures">Adventures</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>		
+
+		<! about me section >
+		<div id="aboutMe" class="container-fluid text-center bg-1">
+			<h1 class="margin">About me</h1>
+			<img src="images/me.png" class="img-responsive img-circle margin" style="diaply:inline;margin:auto;" alt="shyam" width="350" height="350">
+  			<h3>Programmer | Geek | Traveller</h3>  			
+		</div>		
+
+		<! experience section >
+		<div id="experience" class="container-fluid text-center">
+			<h1>Experience</h1>
+			<div class="row">
+			    <div class="col-sm-4" data-toggle="modal" data-target="#expContiModal">
+			    	<div class="card">
+			    		<img class="img-card img-responsive" src="images/conti.gif">
+			    		<h3>Continental</h3>
+			      		<p>Software Engineer</p>
+			    	</div>			  
+			    </div>
+			    <div class="col-sm-4" data-toggle="modal" data-target="#expNUSREModal">
+			    	<div class="card">
+			    	<img class="img-card img-responsive" src="images/NUS.jpg">
+			    	<h3>National University of Singapore</h3>
+				    <p>Research Engineer</p>			    	  				     
+			      </div>
+			    </div>
+			    <div class="col-sm-4" data-toggle="modal" data-target="#expNUSTAModal">
+			    	<div class="card">	
+			    		<img class="img-card img-responsive" src="images/NUS.jpg">
+				      <h3>National University of Singapore</h3>
+				      <p>Teaching Assistant</p>
+			      	</div>
+			    </div>
+		    </div>	
+		    <div class="row">
+		    	<div class="col-sm-4" data-toggle="modal" data-target="#expSNARCModal">
+		    	<div class="card">
+		    		<img class="img-card img-responsive" src="images/cas.jpeg">
+			      <h3>Sensor Networks and Applications Research Center</h3>
+			      <p>Intern</p>
+		        </div>
+			  	</div>
+			    <div class="col-sm-4" data-toggle="modal" data-target="#expDSIModal">
+			    	<div class="card">
+			    		<img class="img-card img-responsive" src="images/dsi.jpg">
+				      <h3>Data Storage Institute</h3>
+				      <p>Intern</p>
+			      </div>
+			    </div>
+		    </div>
+		</div>
+		
+
+		<! education section >
+		<div id="education" class="container-fluid text-center">
+			<h1>Education</h1>
+			<div class="row">
+			    <div class="col-sm-4 col-sm-offset-2" data-toggle="modal" data-target="#eduNUSGradModal">
+			    	<div class="card">
+			    		<img class="img-card img-responsive" src="images/NUS.jpg">
+			    		<h3>National University of Singapore</h3>
+			      		<p>Masters</p>
+			    	</div>			  
+			    </div>
+			    <div class="col-sm-4" data-toggle="modal" data-target="#eduNUSUGModal">
+			    	<div class="card">
+			    		<img class="img-card img-responsive" src="images/NUS.jpg">
+			    		<h3>National University of Singapore</h3>
+			      		<p>Undergraduate</p>
+			    	</div>			  
+			    </div>
+			</div>
+		</div>
+		
+
+		<! projects section >
+		<div id="projects" class="container-fluid text-center">
+			<h1>Projects</h1>
+			<div class="row">
+				<div class="col-sm-4">
+			    	<div class="card">
+			    		<img class="img-card img-responsive" src="images/whatsapp.jpg">
+			    		<h3>WhatsApp Statistics</h3>
+			    		<p>&#60;Under construction&#62;</p>
+			    	</div>			  
+			    </div>
+			    <div class="col-sm-4" data-toggle="modal" data-target="#proj8088Modal">
+			    	<div class="card">
+			    		<img class="img-card img-responsive" src="images/8088.jpg">
+			    		<h3>Intel 8088 processor interrupt service</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-sm-4" data-toggle="modal" data-target="#proj8051Modal">
+			    	<div class="card">
+			    		<img class="img-card img-responsive" src="images/8051.jpg">
+			    		<h3>Development of Intel 8051 microprocessor architecture</h3>
+			    	</div>			  
+			    </div>
+			</div>
+			<div class="row">
+			    <div class="col-sm-4" data-toggle="modal" data-target="#projSoccerModal">
+			    	<div class="card">
+			    		<img class="img-card img-responsive" src="images/soccer.jpg">
+			    		<h3>Real-time soccer controller using FPGAs</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-sm-4" data-toggle="modal" data-target="#projCipherModal">
+			    	<div class="card">
+			    		<img class="img-card img-responsive" src="images/cipher.jpg">
+			    		<h3>Hardware implementation of PRESENT block cipher on FPGA</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-sm-4" data-toggle="modal" data-target="#projFileTransferModal">
+			    	<div class="card">
+			    		<img class="img-card img-responsive" src="images/file.jpg">
+			    		<h3>Java based encrypted file transfer client</h3>
+			    	</div>			  
+			    </div>
+			</div>
+			<div class="row">
+			    <div class="col-sm-4" data-toggle="modal" data-target="#projIVLEModal">
+			    	<div class="card">
+			    		<img class="img-card img-responsive" src="images/ivle.ico">
+			    		<h3>IVLE productivity app</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-sm-4" data-toggle="modal" data-target="#projiPadModal">
+			    	<div class="card">
+			    		<img class="img-card img-responsive" src="images/ipad.jpg">
+			    		<h3>2-D physics engine based iPad game</h3>
+			    	</div>			  
+			    </div>			    
+			</div>
+		</div>
+		
+		
+		<! publications section >
+		<div id="publications" class="container-fluid text-center">
+			<h1>Publications</h1>
+			<ul class="list-group text-left">
+			  <li class="list-group-item">
+			  	<h4>A flexible inexact TMR technique for SRAM-based FPGAs</h4>
+			  	<p>S. Venkataraman, R. Santos and A. Kumar. Design Automation and Test in Europe (DATE’16), 2016.</p>
+			  </li>			  
+			  <li class="list-group-item">
+			  	<a href="pubs/trets14a.pdf" target="_blank"><h4>Autonomous soft-error tolerance of FPGA configuration bits </h4></a>
+			  	<p>A. Das, S. Venkataraman and A. Kumar. in ACM Transactions on Reconfigurable Technology and Systems (TRETS’15), 2015.</p>
+			  </li>
+			  <li class="list-group-item">
+			  	<a href="pubs/samos2015.pdf" target="_blank"><h4>Hardware Task Migration Module for Improved Fault Tolerance and Predictability </h4></a>
+			  	<p>S. Venkataraman, R. Santos and A. Kumar. IEEE International Conference on Embedded Computer Systems: Architectures, Modeling and Simulation (SAMOS’15), 2015.</p>
+			  </li>
+			  <li class="list-group-item">
+			  	<h4>Generic scrubbing-based architecture for custom error correction algorithms</h4>
+			  	<p>R. Santos, S. Venkataraman and A. Kumar. IEEE International Symposium on Rapid System Prototyping (RSP’15), 2015.</p>
+			  </li>
+			  <li class="list-group-item">
+			  	<a href="pubs/dac15.pdf" target="_blank"><h4>Dynamically Adaptive Scrubbing Mechanism for Improved Reliability in Reconfigurable Embedded Systems</h4></a>
+			  	<p>R. Santos, S. Venkataraman and A. Kumar. Design Automation Conference (DAC’15), 2015.</p>
+			  </li>
+			  <li class="list-group-item">
+			  	<a href="pubs/date15b.pdf" target="_blank"><h4>Designing inexact systems efficiently using elimination heuristics</h4></a>
+			  	<p>S. Venkataraman, A. Kumar., J.Schlachter and Christian C. Enz. Design Automation and Test in Europe (DATE’15), 2015</p>
+			  </li>
+			  <li class="list-group-item">
+			  	<a href="pubs/fpl2014d.pdf" target="_blank"><h4>A bit-interleaved embedded hamming scheme to correct single-bit and multi-bit upsets for SRAM-based FPGAs</h4></a>
+			  	<p>S. Venkataraman, R. Santos, A. Das and A. Kumar. IEEE International Conference on Field Programmable Logic and Applications (FPL’14), 2014.</p>
+			  </li>
+			  <li class="list-group-item">
+			  	<a href="pubs/fpl2014c.pdf" target="_blank"><h4>Multi-directional error correction schemes for SRAM-based FPGAs</h4></a>
+			  	<p>S. Venkataraman, R. Santos, S. Maheshwari and A. Kumar. IEEE International Conference on Field Programmable Logic and Applications (FPL’14), 2014.</p>
+			  </li>			  		
+			  <li class="list-group-item">
+			  	<a href="pubs/fpl2014b.pdf" target="_blank"><h4>Criticality-aware scrubbing mechanism for SRAM-based FPGAs</h4></a>
+			  	<p>R. Santos, S. Venkataraman, A. Das and A. Kumar. IEEE International Conference on Field Programmable Logic and Applications (FPL’14), 2014.</p>
+			  </li>
+			  <li class="list-group-item">
+			  	<a href="pubs/akumar_fpl_2013-LUT.pdf" target="_blank"><h4>Improving autonomous soft-error tolerance of FPGA through LUT bit manipulation</h4></a>
+			  	<p>A. Das, S. Venkataraman and A. Kumar. IEEE International Conference on Field Programmable Logic and Applications (FPL’13), 2013.</p>
+			  </li>
+			</ul>
+		</div>
+		
+
+		<! technical skills section >
+		<div id="technicalskills" class="container-fluid text-center">
+			<h1>Technical Skills</h1>
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-2">	
+					<h3>Programming languages</h3>
+					<h3>
+						<span class="label label-default">C</span> 
+						<span class="label label-default">C++</span> 
+						<span class="label label-default">Java</span> 
+						<span class="label label-default">VHDL</span>
+						<span class="label label-default">Objective-C</span>
+					</h3>
+					<h3>
+						<span class="label label-default">OpenGL</span>
+						<span class="label label-default">Assembly</span>
+						<span class="label label-default">Tcl</span>
+						<span class="label label-default">Bash</span>
+						<span class="label label-default">XML</span>
+					</h3>
+				</div>
+				<div class="col-sm-4">	
+					<h3>Tools</h3>
+					<h3>
+						<span class="label label-default">Xilinx Suite</span>
+						<span class="label label-default">QuestaSim</span>
+						<span class="label label-default">ModelSim</span>
+						<span class="label label-default">Matlab</span>
+					</h3>
+					<h3>
+						<span class="label label-default">Visual Studio</span>
+						<span class="label label-default">Eclipse</span>
+						<span class="label label-default">Xcode</span>
+					</h3>
+				</div>
+			</div>
+		</div>
+		
+
+<!-- 		<! volunteering section >
+		<div id="volunteering" class="container-fluid text-center">
+			<h1>Volunteering</h1>
+		</div>
+
+		<! awards section >
+		<div id="awards" class="container-fluid text-center">
+			<h1>Awards</h1>
+		</div> -->
+
+		<! adventure section >
+		<div id="adventures" class="container-fluid text-center">
+			<h1>Adventures</h1>
+			<div class="row">
+				<div class="col-sm-3">
+			    	<div class="card">
+			    		<img class="img-card-bg img-responsive" src="images/skyDiving4.jpg">
+			    	</div>
+			    </div>
+			    <div class="col-sm-3">
+			    	<div class="card">
+			    	<img class="img-card-bg img-responsive" src="images/bungee.jpg">
+			    	</div>
+			    </div>
+			    <div class="col-sm-3">
+			    	<div class="card">
+			    		<img class="img-card-bg img-responsive" src="images/helicopter.jpg">
+			    	</div>
+			    </div>
+			    <div class="col-sm-3">
+			    	<div class="card">
+			    		<img class="img-card-bg img-responsive" src="images/gliding.jpg">
+			    	</div>
+			    </div>
+			</div>
+		    <div class="row">
+		    	<div class="col-sm-3">
+			    	<div class="card">
+			    		<img class="img-card-bg img-responsive" src="images/plane.jpg">
+			    	</div>
+			    </div>
+			    <div class="col-sm-3">
+			    	<div class="card">
+			    		<img class="img-card-bg img-responsive" src="images/touring.jpg">
+			    	</div>
+			    </div>
+			    <div class="col-sm-3">
+			    	<div class="card">
+			    		<img class="img-card-bg img-responsive" src="images/mountain_biking.jpg">
+			    	</div>
+			    </div>
+			    <div class="col-sm-3">
+			    	<div class="card">
+			    		<img class="img-card-bg img-responsive" src="images/skiing.jpg">
+			    	</div>
+			    </div>	
+		    </div>
+		    <div class="row">		    			    
+			    <div class="col-sm-3">
+			    	<div class="card">
+			    		<img class="img-card-bg img-responsive" src="images/mountain_climbing.jpg">
+			    	</div>
+			    </div>
+			    <div class="col-sm-3">
+			    	<div class="card">
+			    		<img class="img-card-bg img-responsive" src="images/scuba.jpg">
+			    	</div>
+			    </div>
+		    </div>
+		</div>
+		
+
+		<!-- <! countries section >
+		<div id="countries" class="container-fluid text-center">
+			<h1>Countries</h1>
+			<div class="row">
+				<div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Australia</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Cambodia</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>China</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Egypt</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Hong Kong</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>India</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Indonesia</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Japan</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Macau</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Malaysia</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>New Zealand</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Oman</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Portugal</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Singapore</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Spain</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Thailand</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>United Arab Emirates</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Vietnam</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>South Korea</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Austria</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Germany</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Switzerland</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Belgium</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>France</h3>
+			    	</div>			  
+			    </div>
+			    <div class="col-md-2">
+			    	<div class="card">
+			    		<h3>Netherlands</h3>
+			    	</div>			  
+			    </div>		    
+		    </div>
+		</div> -->
+
+		<! modals >
+		<!-- Experience Modal -->
+		<!-- Continental Modal -->
+		<div id="expContiModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Continental</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Application software system designer for high-end automotive instrument clusters for Japanese OEMs
+	        		</li>
+					<li>
+						Designed and implemented various modules of the instrument cluster such as turn hazard, seatbelt sub-system, lounge and cluster illumination, coolant temperature, and gear systems
+					</li>
+					<li>
+						Automated testing of modules using in-house unified Test Automation Framework (uTAS)
+					</li>
+					<li>
+						Used various development tools such as GHS Multi (debugger), CANoe Sim (simulation), Understand C (static code analyzer), Jenkins (automation server) and IBM DOORS (requirements management)
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- NUS RE Modal -->
+		<div id="expNUSREModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">National University of Singapore</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Worked on a low power platform for sensing, signal processing and communications in a nano-satellite, which was launched in late 2015
+	        		</li>
+					<li>
+						Developed novel fault tolerance mechanisms for FPGA-based MPSoC systems
+					</li>
+					<li>
+						Utilized various computational softwares and EDA tools including Xilinx, ModelSim and Matlab
+					</li>
+					<li>
+						Published 10 research articles in international peer-reviewed journals and conferences
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- SNARC Modal -->
+		<div id="expSNARCModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Sensor Networks and Applications Research Centre</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Designed a wearable micro-sensor platform and processing system
+	        		</li>
+					<li>
+						Successfully implemented an HMI for the control of electrical appliances through human gestures
+					</li>
+					<li>
+						Developed a robust real-time finger gesture recognizer using the surface electromyography technique
+					</li>
+					<li>
+						Used signal extraction, segmentation, feature extraction and classification to implement the platform
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- NUS TA Modal -->
+		<div id="expNUSTAModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">National University of Singapore</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Instructed a class of over 40 students on C programming (obtained an average rating of 4+ on 5 for overall teaching effectiveness)
+	        		</li>
+					<li>
+						Evaluated and graded students’ codes for weekly labs and practical exams
+					</li>					
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- DSI Modal -->
+		<div id="expDSIModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Data Storage Institute</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Aim of the project was to achieve robotic control through a mobile device
+	        		</li>
+					<li>
+						Successfully developed an accelerometer-based iPhone app to control a Roomba robot
+					</li>
+					<li>
+						Communication between the iPhone and robot was channeled through an intermediary embedded networking module Wifly-GSX RN-131g, an embedded TCP/IP solution
+					</li>
+					<li>
+						Implementation involved interfacing various modules through different protocols, socket programming, PCB soldering and debugging through oscilloscope
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Educations Modals 
+		NUS undergrad modal -->
+		<div id="eduNUSUGModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">National University of Singapore [NUS] 	Aug ’08 - Jul ’12</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Bachelor of engineering [computer engineering], honors
+	        		</li>
+					<li>
+						Cumulative average point (CAP): 4.24 on 5.00 [2nd upper class honors]
+					</li>
+					<li>
+						Specialization in embedded systems
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- NUS masters modal -->
+		<div id="eduNUSGradModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">National University of Singapore [NUS] 	Jan ’14 - July ’15</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Master of engineering [electrical and computer engineering], part-time
+	        		</li>
+					<li>
+						Current cumulative average point (CAP): 4.75 on 5.00
+					</li>
+					<li>
+						Thesis: Fault tolerant multi-processor system for nano-satellites
+					</li>
+					<li>
+						Courses: neural networks, evolutionary computing, reconfigurable systems and multi-processor systems
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Projects modal -->
+		<!-- Intel 8088 modal -->
+		<div id="proj8088Modal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Intel 8088 processor interrupt service</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Programmed an Intel 8088 processor using assembly language
+	        		</li>
+					<li>
+						Developed an interrupt service and GUI for a music memory game playable over two different computers
+					</li>
+					<li>
+						Incorporated concepts such as integration of timer and programmable peripheral interfaces
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Intel 8051 modal -->
+		<div id="proj8051Modal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Development of Intel 8051 microprocessor architecture</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Designed the RTL design of the data path, ALU, and sequencer of the Intel 8051 microprocessor
+	        		</li>
+					<li>
+						Generated a custom instruction set and built a sample application it
+					</li>
+					<li>
+						Implementation was done using VHDL and assembly programming on Xilinx Spartan-3A FPGA board
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Soccer modal -->
+		<div id="projSoccerModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Real-time soccer controller using FPGAs</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Designed and implemented a real-time soccer controller using Xilinx Spartan-3A FPGA boards
+	        		</li>
+					<li>
+						Developed a custom strategy for the soccer controller to intelligently play without external assistance
+					</li>
+					<li>
+						Utilized concepts of UART communication, multi-threading, mailboxes and semaphores
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- PRESENT block cipher modal -->
+		<div id="projCipherModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Hardware implementation of PRESENT block cipher on FPGA</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Implemented multiple hardware versions of the PRESENT block cipher on a Spartan-3A FPGA board
+	        		</li>
+					<li>
+						Designed a custom opcode and driver to interface with the hardware module for hardware acceleration
+					</li>
+					<li>
+						Used various features of the FPGA such as BRAMs and LUTs for acceleration of the block cipher
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Java File Transfer modal -->
+		<div id="projFileTransferModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Java based encrypted file transfer client</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Developed a DES encryption based secure file transfer client on Java
+	        		</li>
+					<li>
+						File transfer client could handle various TCP/UDP variants including pipelined and persistent connections
+					</li>
+					<li>
+						Client was designed to handle file corruptions using the MD5 checksum
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- IVLE modal -->
+		<div id="projIVLEModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">IVLE productivity app</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Programmed a mobile version of IVLE [student’s education portal] using iOS Dev tools (XCode)
+	        		</li>
+					<li>
+						Synchronized workflow using source version controlling
+					</li>
+					<li>
+						App secured 3rd place for the iCreate Mobility Challenge held by NUS
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- iPad game modal -->
+		<div id="projiPadModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">2-D physics engine based iPad game</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+		        	<li>
+		        		Programmed an Angry Birds clone using the iOS Dev tools (XCode)
+	        		</li>
+					<li>
+						Built a 2-D physics engine for the interaction between various objects 
+					</li>
+					<li>
+						Performed rigorous unit and integration testing of various components of the game
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+	</body>
+</html>
