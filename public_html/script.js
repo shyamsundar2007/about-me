@@ -1,8 +1,8 @@
-var workExp = [{company: "Continental Automotive", role: "Software engineer", period: "Aug 2015 - present", description: ""}, 
-               {company: "National University of Singapore", role: "Research engineer", period: "Sep 2012 - Jun 2015", description: ""}, 
-               {company: "National University of Singapore", role: "Lab Teaching Assistant", period: "Jun 2010 - Jun 2012", description: ""}, 
-               {company: "Sensor Networks and Applications Research Centre", role: "Research Intern", period: "May 2011 - Jul 2011", description: ""}, 
-               {company: "Data Storage Institute", role: "Research Intern", period: "May 2010 - Aug 2010", description: ""}];
+var workExp = [{id: "1", company: "Continental Automotive", role: "Software engineer", period: "Aug 2015 - present", description: ""}, 
+               {id: "2", company: "National University of Singapore", role: "Research engineer", period: "Sep 2012 - Jun 2015", description: ""}, 
+               {id: "3", company: "National University of Singapore", role: "Lab Teaching Assistant", period: "Jun 2010 - Jun 2012", description: ""}, 
+               {id: "4", company: "Sensor Networks and Applications Research Centre", role: "Research Intern", period: "May 2011 - Jul 2011", description: ""}, 
+               {id: "5", company: "Data Storage Institute", role: "Research Intern", period: "May 2010 - Aug 2010", description: ""}];
 
 var education = [{school:"National University of Singapore", subject:"Master of engineering [electrical and computer engineering]", score: "cumulative average point (CAP): 4.75 on 5.00", period: "Jan 2014 - Jul 2015", description: ""}, 
                  {school:"National University of Singapore", subject:"Bachelor of engineering [computer engineering]", score: "cumulative average point (CAP): 4.24 on 5.00 [2nd upper class honors]", period: "Aug 2008 - Jul 2012", description: ""}];
@@ -26,6 +26,8 @@ function createCardFor(work) {
   var title = document.createElement("h4");
   var subtitle = document.createElement("h6");
   var text = document.createElement("p");
+  var expand = document.createElement("a");
+  var expandDiv = document.createElement("div");
   
   col.className = "col-sm-4";
   card.className = "card mt-2 mb-2";
@@ -35,6 +37,16 @@ function createCardFor(work) {
   title.className = "card-title";
   subtitle.className = "card-subtitle";
   text.className = "card-text";
+  expand.className = "btn btn-primary";
+  expand.setAttribute("data-toggle", "collapse");
+  expand.href = "expand" + work.id;
+  expandDiv.className = "collapse";
+  expandDiv.id = "expand" + work.id;
+  expand.innerHTML = "more";
+  expandDiv.innerHTML = "some test para";
+  expand.onclick = function() {
+    $('#expand' + work.id).collapse('toggle');
+  }
   
   title.innerHTML = work.company;
   subtitle.innerHTML = work.role;
@@ -43,6 +55,8 @@ function createCardFor(work) {
   body.appendChild(title);
   body.appendChild(subtitle);
   body.appendChild(text);
+  body.appendChild(expand);
+  body.appendChild(expandDiv);
   
   card.appendChild(img);
   card.appendChild(body);
