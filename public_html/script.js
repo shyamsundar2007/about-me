@@ -9,7 +9,14 @@ var education = [{school:"National University of Singapore", subject:"Master of 
 
 var projects = [{title: "Whatsapp statistics", description: "View converstation statistics from whatsapp conversations"},
                {title: "TOI Movie Scraper", description: "Scrape good movie reviews from Times of India and get notified on your phone"},
-               {title: "Carousell notifier", description: "Get notified immediately on items you're looking for on Carousell"}];
+               {title: "Carousell notifier", description: "Get notified immediately on items you're looking for on Carousell"},
+{title: "Intel 8088 processor interrupt service", description: "Music memory game playable over two different computers"},
+{title: "Intel 8051 microprocessor", description: "Custom implementation of the data path, ALU, and sequencer of the Intel 8051 microprocessor"},
+{title: "Real-time soccer controller using FPGAs", description: "Real-time AI soccer game using Xilinx Spartan-3A FPGA boards"},
+{title: "Hardware PRESENT block cipher on FPGA", description: "Custom hardware accelerated PRESENT block cipher implementation"},
+{title: "Java encrypted file transfer client", description: "DES encryption based secure file transfer client in Java"},
+{title: "IVLE iOS app", description: "Mobile version of IVLE [student’s education portal] for the iPad"},
+{title: "2D physics engine iPad game", description: "Clone of angry birds game using custom physics engine"}];
 
 function createCardFor(work) {
   var col = document.createElement("div");
