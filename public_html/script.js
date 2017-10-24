@@ -17,12 +17,10 @@ function createCardFor(work) {
   title.className = "card-title";
   subtitle.className = "card-subtitle";
   text.className = "card-text";
-  expand.className = "btn btn-primary";
   expand.setAttribute("data-toggle", "collapse");
   expand.href = "expand" + work.id;
   expandDiv.className = "collapse";
   expandDiv.id = "expand" + work.id;
-  expand.innerHTML = "more";
   expandDiv.innerHTML = "some test para";
   expand.onclick = function() {
     $('#expand' + work.id).collapse('toggle');
@@ -35,13 +33,14 @@ function createCardFor(work) {
   body.appendChild(title);
   body.appendChild(subtitle);
   body.appendChild(text);
-  body.appendChild(expand);
   body.appendChild(expandDiv);
   
   card.appendChild(img);
   card.appendChild(body);
+
+  expand.appendChild(card);
   
-  col.appendChild(card);
+  col.appendChild(expand);
   
   return col;
 }
