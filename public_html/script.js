@@ -1,3 +1,5 @@
+imageBasePath = "/assets/images/";
+
 function createCardFor(work) {
 	var col = document.createElement("div");
 	var card = document.createElement("div");
@@ -8,10 +10,12 @@ function createCardFor(work) {
 	var text = document.createElement("p");
 	var expand = document.createElement("a");
 	var expandDiv = document.createElement("div");
+	var expandDesc = document.createElement("ul");
+
 	col.className = "col-sm-4";
 	card.className = "card mt-2 mb-2";
-	img.className = "card-img-top";
-	img.src = "/assets/images/" + work.image;
+	img.className = "card-img-top img-fluid";
+	img.src = imageBasePath + work.image;
 	body.className = "card-body";
 	title.className = "card-title";
 	subtitle.className = "card-subtitle";
@@ -20,7 +24,15 @@ function createCardFor(work) {
 	expand.href = "expand" + work.id;
 	expandDiv.className = "collapse";
 	expandDiv.id = "expand" + work.id;
-	expandDiv.innerHTML = "some test para";
+
+	// add description as unordered list
+	for (index in work.description) {
+		var item = document.createElement("li");
+		item.innerHTML = work.description[index];
+		expandDesc.appendChild(item);
+	}
+
+	expandDiv.appendChild(expandDesc);
 	expand.onclick = function () {
 		$('#expand' + work.id).collapse('toggle');
 	}
@@ -49,8 +61,8 @@ function createCardForSchool(school) {
 	var text = document.createElement("p");
 	col.className = "col-sm-4";
 	card.className = "card mt-2 mb-2";
-	img.className = "card-img-top";
-	img.src = "/assets/images/" + school.image;
+	img.className = "card-img-top img-fluid";
+	img.src = imageBasePath + school.image;
 	body.className = "card-body";
 	title.className = "card-title";
 	subtitle.className = "card-subtitle";
@@ -76,8 +88,8 @@ function createCardForProject(project) {
 	var text = document.createElement("p");
 	col.className = "col-sm-4";
 	card.className = "card mt-2 mb-2";
-	img.className = "card-img-top";
-	img.src = "/assets/images/" + project.image;
+	img.className = "card-img-top img-fluid";
+	img.src = imageBasePath + project.image;
 	body.className = "card-body";
 	title.className = "card-title";
 	text.className = "card-text";
